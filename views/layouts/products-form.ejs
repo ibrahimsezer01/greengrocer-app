@@ -1,0 +1,40 @@
+<div class="contact_section layout_padding margin_top_80">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12 my-4">
+                <h1 class="about_taital">Ürün Ekleyin</h1>
+                <div class="mail_section">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group my-4">
+                            <input type="text" class="form-control" placeholder="Product Name" id="name" name="name" required>
+                        </div>
+                        <div class="form-group my-4">
+                            <input type="number" step="0.01" class="form-control" placeholder="Price" id="price" name="price" required>
+                        </div>
+                        <div class="form-group my-4">
+                            <textarea class="form-control" placeholder="Description" id="description" name="description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group my-4">
+                            <input type="number" class="form-control" placeholder="Stock" id="stock" name="stock" required>
+                        </div>
+                        <div class="form-group mt-4">
+                            <select class="form-control" name="CategoryId" id="CategoryId" required>
+                                <option value="-1" selected disabled>Categories</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>"><%= category.name %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="form-group border mt-4">
+                            <label for="images" class="btn btn-secondary">Resim Seçiniz</label>
+                            <input id="images" style="visibility:hidden;" type="file" name="images" required>
+                        </div>
+                        <div class="send_bt mt-4">
+                            <button type="submit" class="btn btn-warning">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

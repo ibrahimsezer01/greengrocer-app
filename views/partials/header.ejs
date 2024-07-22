@@ -1,0 +1,80 @@
+<header class="header_section bg-success">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- Logo -->
+            <div class="col-md-1">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Menü -->
+            <div class="col-md-10">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link <%= page_name === 'Home' ? 'text-warning' : 'text-white' %>"
+                                    href="/">Ana
+                                    Sayfa</a>
+                            </li>
+                            <% if (isAuth) { %>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Shop' ? 'text-warning' : 'text-white' %>"
+                                        href="/shop">Market</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'About' ? 'text-warning' : 'text-white' %>"
+                                        href="/about">Hakkımızda</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Contact' ? 'text-warning' : 'text-white' %>"
+                                        href="/contact">İletişim</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Pashboard' ? 'text-warning' : 'text-white' %>"
+                                        href="/dashboard">Ürünlerim</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Products' ? 'text-warning' : 'text-white' %>"
+                                        href="/products">ADD PRODUCTS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Logout' ? 'text-warning' : 'text-white' %>"
+                                        href="/logout">Çıkış Yap</a>
+                                </li>
+                                <% } else { %>
+                                    <li class="nav-item">
+                                        <a class="nav-link <%= page_name === 'Log in' ? 'text-warning' : 'text-white' %>"
+                                            href="/login">Giriş Yap</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link <%= page_name === 'Register' ? 'text-warning' : 'text-white' %>"
+                                            href="/register">Çıkış yap</a>
+                                    </li>
+                                    <% } %>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Arama Alanı -->
+            <div class="col-md-1">
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="search_icon"><a href="#"><img src="/images/search.png" alt="Search Icon"
+                                height="36px"></a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

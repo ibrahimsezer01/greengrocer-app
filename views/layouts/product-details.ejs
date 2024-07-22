@@ -1,0 +1,35 @@
+<div class="about_section">
+    <div class="container">
+        <div class="row border justify-content-center align-items-center"> <!-- Sağ ve sol sütunları yatayda ve dikeyde ortalamak için d-flex ve align-items-center sınıflarını ekledik -->
+            <!-- Sağ Sütun: Ürün Resmi -->
+            <div class="col-md-6">
+                <div class="box_section rounded p-3 d-flex align-items-center justify-content-center"> <!-- Ürün resmi kutusunu yatayda ve dikeyde ortalamak için d-flex ve justify-content-center sınıflarını ekledik -->
+                    <div class="image_4"> <!-- Ürün resmi burada -->
+                        <img src="<%= product.image_url %>" class="img-fluid rounded" alt="Product Image">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sol Sütun: Ürün Bilgileri -->
+            <div class="col-md-6">
+                <div class="box_section rounded p-3">
+                    <h2 class="dolor_text">
+                        <span style="color: #ebc30a;">
+                            <%= product.price %> TL
+                        </span>
+                    </h2>
+                    <h2 class="dolor_text">
+                        <%= product.name %>
+                    </h2>
+                    <h2 class="dolor_text_1">1 kg</h2>
+                    <p class="tempor_text">
+                        <%= product.description %>
+                    </p>
+                    <p class="tempor_text">Son <%= product.stock %> kg</p>
+                    <div class=""><a href="#" class="btn btn-warning">Sepete Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
